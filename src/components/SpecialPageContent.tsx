@@ -26,7 +26,7 @@ export default function SpecialPageContent() {
           COMING SOON
         </h1>
         <p className="mb-6 text-center text-sm md:text-base uppercase tracking-[0.28em] text-white/60">
-          to Copperfield, TX
+          to Copperfield • Houston, Texas
         </p>
       </motion.div>
 
