@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Gallery", href: "/gallery" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Promotion", href: "/promotion" },
 ];
 
 export default function Navbar() {
@@ -74,7 +75,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/special"
+            href="/booking"
             className="px-5 py-2 rounded-full bg-gold text-charcoal text-sm font-semibold uppercase tracking-widest hover:scale-105 transition-transform duration-200"
           >
             Book Now
