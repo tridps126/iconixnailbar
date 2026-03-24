@@ -17,9 +17,17 @@ export async function POST(req: NextRequest) {
     .from("contact_submissions")
     .insert({ name, email, phone: phone ?? null, message });
 
+  // if (error) {
+  //   return NextResponse.json(
+  //     { error: "Something went wrong" },
+  //     { status: 500 },
+  //   );
+  // }
   if (error) {
+    console.error("SUPABASE ERROR:", error); // 👈 thêm dòng này
+
     return NextResponse.json(
-      { error: "Something went wrong" },
+      { error: error.message }, // 👈 trả lỗi thật luôn
       { status: 500 },
     );
   }
