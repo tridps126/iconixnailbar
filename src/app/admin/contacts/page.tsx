@@ -12,7 +12,7 @@ interface ContactSubmission {
   email: string;
   phone: string | null;
   message: string;
-  status: Status;
+  // status: Status;
 }
 
 function formatDate(iso: string) {
@@ -99,9 +99,9 @@ export default async function ContactsPage() {
                   <td className="px-4 py-3 text-charcoal max-w-xs">
                     <span title={c.message}>{truncate(c.message)}</span>
                   </td>
-                  <td className="px-4 py-3">
+                  {/* <td className="px-4 py-3">
                     <StatusSelect id={c.id} currentStatus={c.status} />
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>
