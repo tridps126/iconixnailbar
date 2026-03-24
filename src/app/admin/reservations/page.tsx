@@ -10,7 +10,7 @@ interface Reservation {
   name: string;
   email: string;
   phone: string | null;
-  confirmed: boolean;
+  // confirmed: boolean;
 }
 
 function formatDate(iso: string) {
@@ -25,7 +25,7 @@ export default async function ReservationsPage() {
   const supabase = createServiceClient();
   const { data, error } = await supabase
     .from("soft_opening_reservations")
-    .select("id, created_at, name, email, phone, confirmed")
+    .select("id, created_at, name, email, phone")
     .order("created_at", { ascending: false });
 
   const reservations: Reservation[] = error || !data ? [] : data;
@@ -87,9 +87,9 @@ export default async function ReservationsPage() {
                 <th className="text-left px-4 py-3 font-semibold text-charcoal">
                   Phone
                 </th>
-                <th className="text-left px-4 py-3 font-semibold text-charcoal">
+                {/* <th className="text-left px-4 py-3 font-semibold text-charcoal">
                   Confirmed
-                </th>
+                </th> */}
               </tr>
             </thead>
             <tbody className="divide-y divide-almond/60">
@@ -112,7 +112,7 @@ export default async function ReservationsPage() {
                   <td className="px-4 py-3 text-muted whitespace-nowrap">
                     {r.phone ?? "—"}
                   </td>
-                  <td className="px-4 py-3">
+                  {/* <td className="px-4 py-3">
                     <span
                       className={`inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full border ${
                         r.confirmed
@@ -122,7 +122,7 @@ export default async function ReservationsPage() {
                     >
                       {r.confirmed ? "Yes" : "Pending"}
                     </span>
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>

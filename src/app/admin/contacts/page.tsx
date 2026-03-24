@@ -71,9 +71,9 @@ export default async function ContactsPage() {
                 <th className="text-left px-4 py-3 font-semibold text-charcoal">
                   Message
                 </th>
-                <th className="text-left px-4 py-3 font-semibold text-charcoal">
+                {/* <th className="text-left px-4 py-3 font-semibold text-charcoal">
                   Status
-                </th>
+                </th> */}
               </tr>
             </thead>
             <tbody className="divide-y divide-almond/60">
