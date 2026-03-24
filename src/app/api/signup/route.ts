@@ -23,6 +23,8 @@ export async function POST(req: NextRequest) {
   });
 
   if (error) {
+    console.error("SUPABASE ERROR:", error); // 👈 thêm dòng này
+
     if (error.code === "P0001" && error.message.includes("SPOTS_FULL")) {
       return NextResponse.json({ error: "spots_full" }, { status: 409 });
     }
