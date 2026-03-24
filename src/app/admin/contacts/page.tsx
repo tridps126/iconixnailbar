@@ -31,7 +31,7 @@ export default async function ContactsPage() {
   const supabase = createServiceClient();
   const { data, error } = await supabase
     .from("contact_submissions")
-    .select("id, created_at, name, email, phone, message, status")
+    .select("id, created_at, name, email, phone, message")
     .order("created_at", { ascending: false });
 
   const contacts: ContactSubmission[] = error || !data ? [] : data;
