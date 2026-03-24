@@ -7,6 +7,12 @@ export async function POST(request: NextRequest) {
   const adminPassword = process.env.ADMIN_PASSWORD;
   const secret = process.env.ADMIN_SESSION_SECRET;
 
+  console.log("ENV CHECK:", {
+    adminPassword,
+    secret,
+  });
+
+
   if (!adminPassword || !secret) {
     return NextResponse.json(
       { error: "Server misconfigured" },
