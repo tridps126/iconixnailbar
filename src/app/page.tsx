@@ -380,6 +380,44 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* ── Policy ── */}
+      <section className="py-24 px-6 md:px-12 bg-almond">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp} className="text-center mb-12">
+              <SectionLabel text="Policy" />
+              <h2 className="font-display text-4xl md:text-5xl text-charcoal font-semibold mt-10">
+                Privacy policy
+              </h2>
+
+              <motion.p
+                variants={fadeUp}
+                className="text-muted mb-10 leading-relaxed mt-4"
+              >
+                No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+              </motion.p>
+
+              <h2 className="font-display text-4xl md:text-5xl text-charcoal font-semibold">
+                SMS disclaimer
+              </h2>
+
+              <motion.p
+                variants={fadeUp}
+                className="text-muted mb-10 leading-relaxed mt-4"
+              >
+                By providing a telephone number and submitting the form you are consenting to be contacted by SMS text message (our message frequency may vary). Message & data rates may apply. Reply STOP to opt-out of further messaging. Reply HELP for more information. See our Privacy Policy.              </motion.p>
+            </motion.div>
+
+
+          </motion.div>
+        </div>
+      </section>
     </>
   );
 }
