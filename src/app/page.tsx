@@ -393,7 +393,7 @@ export default function Home() {
             <motion.div variants={fadeUp} className="text-center mb-12">
               <SectionLabel text="Policy" />
               <h2 className="font-display text-4xl md:text-5xl text-charcoal font-semibold mt-10">
-                Privacy policy
+                Privacy Policy
               </h2>
 
               <motion.p
@@ -404,7 +404,7 @@ export default function Home() {
               </motion.p>
 
               <h2 className="font-display text-4xl md:text-5xl text-charcoal font-semibold">
-                SMS disclaimer
+                SMS Disclaimer
               </h2>
 
               <motion.p
